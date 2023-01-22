@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 1em Arial;
+        }
+        div#resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="pais">Qual seu pais: </label>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="getNacionalidade()">
+    <div id="resultado">
+    </div>
+
+    <script>
+        function getNacionalidade() {
+            var pais = window.document.querySelector('input#pais')
+            var resultado = window.document.getElementById('resultado')
+            if (pais.value == 'EUA') {
+                resultado.innerHTML = `Você é <strong>ESTRANGEIRO!</strong>`
+            } else {
+                resultado.innerHTML = `Você é <strong>Brasileiro!</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
