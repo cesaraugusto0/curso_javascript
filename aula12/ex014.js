@@ -6,7 +6,6 @@ var diaSem = 2// agora.getDay()
     2 = Terça
     ...
 */
-
 console.log(diaSem)
 switch (diaSem) {
     case 0:
